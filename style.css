@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    
+}
+
+.header{
+    /* background-color: blueviolet; */
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px 7%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    z-index: 100; /* For to put in top of the site */ 
+}
+
+/*  For ancher reference tags - chnaging text color & removing under line */
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/* this is for Portfolio to get bold */
+.header .logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: blueviolet;
+    transition: 0.7s;
+
+}
+.header .logo:hover{
+ color:#7cf03d;
+}
+/* 1. now iam doing  un-oder list to set in one row */
+.header ul {
+    display: flex;
+}
+
+/* 2. now iam doing  un-oder list to set gap between the text & removing dots */
+.header ul li{
+    list-style: none;
+    margin-left: 35px;
+}
+
+/* 3. now iam doing  in un-oder list to ancher tag i increased text height and bold the text  & and added transitions*/
+.header ul li a{
+    font-size: 30px;
+    font-weight: 700;
+    transition: 0.7s;
+}
+/* 4. added hover effects and for active class it can chnage color */
+.header ul li:hover a,
+.header ul li.active a{
+    color: #7cf03d;
+}
+
+/* now this for sections in html - in this it set yext to center added the height & padding & color to text */
+.main{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: white;
+}
+
+/*  */
+.main h1{
+    font-size: 50px;
+}
+.main h2{
+    font-size: 30px;
+    margin-top: 5px;
+    line-height: 1.5;
+    padding: 5px 0;
+}
+
+.main p{
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+.main .button {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+   
+}
+
+.main .button .social{
+    display: flex;
+    justify-content: space-between;
+    padding:6px 15px;
+    margin-top: 10px;
+
+}
+.but{
+    display: inline-block;
+    padding: 10px;
+    background-color: #7cf03d;
+    border: 5px solid #7cf03d ;
+    border-radius: 50px;
+    box-shadow: 10px;
+    color: black;
+    font-weight: 60px;
+    transition: 0.7s;
+}
+.but:hover{
+    background: transparent;
+    color:#ba4a00;
+}
+
+.main .button .social{
+    margin-left: 10px;
+}
+
+.main .button .social a{
+    display: inline-flex;
+    padding: 8px;
+    border:2px solid #ba4a00;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.main .button .social a:hover{
+    background: transparent;
+    color: #ec7063;
+}
+
+.img .img2 {
+    width: 250px;
+    height: 250px;
+    background-color: #ec7063;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img .img2 .pro{
+    background: url('https://img.freepik.com/free-photo/green-gradient-abstract-background-empty-room-with-space-your-text-picture_1258-117939.jpg');
+    border: 5px solid #00FF00;
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.img .img2 .pro img{
+    width: 90%;
+    object-fit: cover;
+   
+}
+
+/* Content section */
+.content-section{
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #7cf03d;
+  }
+
+  .content-section p{
+    font-size: 25px;
+    color: antiquewhite;
+  }
+
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+  }
+  .skills-list h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #7cf03d;
+  }
+  
+  .skills-list li {
+    margin: 10px 0;
+    color: bisque;
+  }
+
+  @media (max-width: 768px) {
+    /* Header (Navbar) adjustments */
+    .header {
+      flex-direction:row;
+      align-items: center;
+      padding: 20px 5%;
+    }
+  
+    .header ul {
+      flex-direction: row;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+  
+    .header ul li {
+      margin: 10px 0;
+    }
+  
+    .header ul li a {
+      font-size: 20px;
+      padding: 5px;
+    }
+  
+    /* Main Section layout fix */
+    .main {
+      flex-direction: column;
+      text-align: center;
+      padding: 100px 5% 0;
+    }
+  
+    .main h1 {
+      font-size: 28px;
+    }
+  
+    .main h2 {
+      font-size: 20px;
+      margin-top: 8px;
+    }
+  
+    .main p {
+      font-size: 16px;
+      padding: 0 10px;
+      margin-top: 10px;
+    }
+  
+    /* Buttons and social icons */
+    .main .button {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    .main .button .social {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      padding: 10px 0;
+    }
+  
+    .main .button .social a {
+      margin: 5px 0;
+    }
+  
+    /* Profile Image Resize */
+    .img {
+      margin-top: 30px;
+    }
+  
+    .img .img2 {
+      width: 150px;
+      height: 150px;
+      margin: auto;
+    }
+  
+    .img .img2 .pro {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .img .img2 .pro img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  /* Hamburger icon */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle div {
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  /* Responsive hamburger menu */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .header ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      background-color: #111;
+      border-radius: 8px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+  
+    .header ul.show-menu {
+      display: flex;
+    }
+  
+    .header ul li {
+      margin: 10px 0;
+    }
+  
+    .header ul li a {
+      font-size: 18px;
+    }
+  }
+  
